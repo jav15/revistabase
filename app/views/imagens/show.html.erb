@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<p>
+       <%= image_tag @imagen.picture.thumb.url, class: 'img-thumbnail img-fluid rounded' %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @imagen.position %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @imagen.post_id %>
+</p>
+
+<%= link_to 'Edit', edit_imagen_path(@imagen) %> |
+<%= link_to 'Back', imagens_path %>
