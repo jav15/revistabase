@@ -1,0 +1,21 @@
+.container  
+  = simple_form_for(@post) do |f|
+    = f.error_notification
+    = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+    .form-inputs
+      = f.input :title
+      = f.input :code
+      = f.input :description
+      = f.association :category,class: "form-control"
+
+      %h3
+        Add Content
+      =f.simple_fields_for :contents do |contents|
+        = render 'content_fields', f: contents
+    .links    
+      = link_to_add_association 'Add content', f, :contents
+
+
+    .form-actions
+      = f.button :submit,class: "btn btn-primary"

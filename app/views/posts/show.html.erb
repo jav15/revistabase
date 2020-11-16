@@ -19,6 +19,11 @@
   <strong>Category:</strong>
   <%= @post.category_id %>
 </p>
-
+<h3>Contenido</h3>
+<ul>
+	<% for @content in @post.contents %>
+	<li><%= @content.body %></li>
+	<% end %>
+</ul>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
