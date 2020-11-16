@@ -1,0 +1,13 @@
+%nav.navbar.navbar-expand-md.bg-primary.navbar-dark
+  = link_to root_path, class: "navbar-brand ml-1 pb-0 pt-0 js-scroll-trigger" do
+    Navbar
+  %button.navbar-toggler{"data-target" => "#collapsibleNavbar", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #collapsibleNavbar.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item
+        %a.nav-link{:href => "#"} Link
+      %li.nav-item
+        %a.nav-link{:href => "#"} Link
+      %li.nav-item
+        = link_to 'Cerrar sesión', destroy_user_session_path, method:  :delete

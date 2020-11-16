@@ -7,7 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import "bootstrap"
+import 'bootstrap';
+import 'cocoon';
 import "../stylesheets/application";
 document.addEventListener("turbolinks:load", function() {
     $(function () {
